@@ -4,9 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" 
+    integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,700;1,100;1,200;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <title>Carol Campelo</title>
 </head>
+
 <body>
-    
+    <header>
+        <div>
+            <img src="" alt=""/>
+        </div>
+        <ul>
+            <li>
+                <a target="_blank" href="https://github.com/carolcampelo">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="mailto:campelocg@gmail.com">
+                    <i class="far fa-envelope"></i>
+                </a>
+            </li>
+            <li>
+                <a target="_blank" href="https://wa.me/51982342807">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <main class="flex">
+        <section class="container">
+            <div class="name">
+                <h1>Carol Campelo</h1>
+                <h5>Full Stack Developer</h5>
+            </div>
+            
+            <div onclick="displayAbout()" id="arrow">
+                <i id="animation" class="fas fa-chevron-right"></i>
+            </div>
+
+            <div style="display: none;" id="about">
+                <p>
+                    Psicóloga de formação, apaixonada por tecnologia e em busca daquilo que faz brilhar os olhos.<br/>
+                    Atualmente em formação Dev Full Stack pela Gama Academy & Start Tech - estudando HTML, CSS, TypeScript, JavaScript, React, Node.Js e GraphQL.<br/>
+                    Também em aprendizado de Python e análise de dados.
+                </p>
+            </div>
+
+            <div class="form">
+                <div>
+                    <p>deixe seu contato!</p>
+                </div>
+                <form action="">
+                    <input type="text" placeholder="seu melhor e-mail :)">
+                    <button>enviar!</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function displayAbout() {
+            var arrow = document.getElementById('animation');
+            arrow.classList.toggle('rotate');
+            var display = document.getElementById('about');
+            display.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
